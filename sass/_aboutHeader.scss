@@ -1,0 +1,161 @@
+.about_header {
+  @media screen and (max-width: 700px) {
+    height: auto;
+  }
+  background-color: #000;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  margin-bottom: 70px;
+
+  .imageBox {
+    @media screen and (max-width: 700px) {
+      grid-column: 1;
+      grid-row: 3;
+      display: flex;
+    }
+
+    @media screen and (max-width: 992px) and (min-width: 700px) {
+      grid-row: 2;
+      grid-column: 1;
+      grid-template-columns: 0.5fr;
+      grid-template-rows: 0;
+    }
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: 40% 60%;
+    .secondImage {
+      position: relative;
+      background-image: url("https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      z-index: 20;
+      grid-column: 1;
+      grid-row: 2;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 10;
+        transition: all 0.4s;
+      }
+      p {
+        position: absolute;
+        color: #fff;
+        z-index: 22;
+        font-size: 26px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .container {
+    @media screen and (max-width: 700px) {
+      grid-template-columns: 100%;
+      grid-template-rows: 250px 400px 400px;
+      position: relative;
+    }
+    @media screen and (max-width: 992px) and (min-width: 700px) {
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 40% 60%;
+      position: relative;
+    }
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 100%;
+    height: 100%;
+
+    .text {
+      grid-column: 1;
+      @media screen and (max-width: 700px) {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      @media screen and (max-width: 992px) and (min-width: 700px) {
+        grid-row: 1;
+        grid-column: span 2;
+        margin-bottom: 70px;
+      }
+      h1 {
+        @media screen and (max-width: 700px) {
+          margin-top: -20px;
+        }
+        width: 100%;
+        text-align: center;
+        position: relative;
+        top: 150px;
+        color: #fff;
+      }
+    }
+    .image {
+      @media screen and (max-width: 700px) {
+        grid-column: 1;
+        grid-row: 2;
+        display: flex;
+      }
+      @media screen and (max-width: 992px) and (min-width: 700px) {
+        grid-row: 2;
+        grid-column: 2;
+        position: absolute;
+      }
+      background-image: url("https://images.unsplash.com/photo-1626125345510-4603468eedfb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      grid-column: 2;
+      z-index: 10;
+      position: relative;
+      p {
+        @media screen and (max-width: 700px) {
+          width: 90%;
+          font-size: 13px;
+          position: absolute;
+          text-align: center;
+          left: 5%;
+          top: 40%;
+        }
+        @media screen and (max-width: 992px) and (min-width: 700px) {
+          position: relative;
+          font-size: 13px;
+          top: 35%;
+          left: 0;
+          width: 70%;
+        }
+        position: absolute;
+        text-align: left;
+        width: 35%;
+        top: 180px;
+        right: 150px;
+        margin: 0 auto;
+        color: #fff;
+        z-index: 12;
+        line-height: 1.4;
+        font-size: 16px;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 10;
+        transition: all 0.4s;
+      }
+    }
+  }
+}

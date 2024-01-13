@@ -1,0 +1,53 @@
+.contact {
+  width: 100%;
+  height: 100vh;
+  .container {
+    height: 100%;
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: 50% 50%;
+
+    .firstBox {
+      background-image: url("https://images.unsplash.com/photo-1597919304146-a8a81c30d502?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fGNvbnRhY3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      //   grid-column: 1;
+    }
+    .secondBox {
+      color: #fff;
+      padding: 150px 50px;
+
+      h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 13px;
+        width: 70%;
+        margin-bottom: 50px;
+      }
+      .links {
+        p {
+          margin-bottom: 10px;
+          span {
+            margin-left: 5px;
+          }
+          a {
+            text-decoration: none;
+            color: #fff;
+            margin-left: 5px;
+            transition: 0.3s;
+            &:hover {
+              color: #000;
+              background-color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.contactPadding {
+  padding-top: 80px;
+}
